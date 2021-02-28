@@ -6,6 +6,9 @@
     <title>Mi Curriculum</title>
   </head>
   <body>
+
+  <script src="main.js"></script>
+
 <!-- CSS -->
 <style type="text/css" media="screen">
     body {
@@ -64,7 +67,43 @@
       text-decoration: none;
       color: white;
     }
-
+    #botonfoto {
+      position:absolute;
+      width: 190px;
+      height: 200px;
+      border: none;
+      text-decoration: none;
+      font-size: 15px;
+      background: #D6EAF8;
+      opacity: 0%;
+      border: none;
+      z-index:3;
+      font-weight:bold;
+    }
+    #botonfoto,#botonfoto2:hover {
+      opacity: 50%;
+    }
+    #botonfoto2 {
+      position:absolute;
+      width: 190px;
+      height: 200px;
+      border: none;
+      text-decoration: none;
+      font-size: 15px;
+      background: #D6EAF8;
+      opacity: 0%;
+      border: none;
+      z-index:2;
+      display: none;
+      font-weight:bold;
+    }
+    img {
+      z-index: 1;
+    }
+    #info {
+      display:inline-block;
+      position: absolute;
+    }
 </style>
 
 <!-- Menu -->
@@ -90,6 +129,22 @@
   </p>
 </div>
 
+<div id="informacion">
+  <button id="botonfoto" onclick="document.getElementById('foto').src='img.jpg',funcionA()"> Ver foto</button>
+  <button id="botonfoto2" onclick="funcionB()">Ocultar foto</button>
+  <img id="foto" height="200px" width="190px">
+  <div id="info">
+    <ul>
+      <li>Nombre: Leonardo Jesus Palermo Mata.</li>
+      <li>CI: 30.281.000</li>
+      <li>Fecha de nacimiento: 07-12-2000</li>
+      <li id="Edad"></li>
+      <li>Lugar de nacimiento: Valencia-Carabobo</li>
+      <li>Tlf Móvil: 0424-4739046</li>
+      <li>Tlf Fijo: 0245-5645388</li>
+    </ul>
+  </div>
+</div>
 <hr>
 <div id="experiencia">
   <h2>Experiencia</h2>
@@ -104,7 +159,7 @@
   </thead>
   <tbody>
     <tr>
-      <td>Occultu</td>
+      <td>Occultu Media</td>
       <td>Asistemte de programador/Aprendiz</td>
       <td>Venezuela</td>
       <td>Junio 2017 - Febrero 2018 </td>
